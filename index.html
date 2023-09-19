@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validando formulários com JQuery Validation</title>
+<!-- Inclusão do jQuery-->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<!-- Inclusão do Plugin jQuery Validation-->
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+</head>
+<body>
+
+<form id="formComentario" method="post" action="">
+  <fieldset>
+    <p>
+      <input type="submit" value="Enviar">
+    </p><p>
+        <label for="password">Senha (obrigatório, pelo menos 6 caracteres)</label>
+        <input type="password" id="password" name="password" required minlength="6">
+      </p>
+      <p>
+        <label for="confirmPassword">Confirme a senha (obrigatório, deve ser igual à senha)</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required equalTo="#password">
+      </p>
+      
+  </fieldset>
+</form>
+<!-- Inclusão das validações com o Plugin jQuery Validation-->
+<script src="validacao.js"></script>
+</body>
+</html>
